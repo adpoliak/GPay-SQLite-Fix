@@ -49,6 +49,9 @@ if [ $runsql -eq 1 ] ; then
 		sqlpath=/data/data/com.termux/files/usr/lib
 		echo "SQLite3 binary found in: $sqlpath" >> $logfile
 		echo "" >> $logfile
+	elif [ -f /data/data/com.keramidas.TitaniumBackup/files/sqlite3 ] ; 	then
+		sqlpath=/data/data/com.keramidas.TitaniumBackup/files
+		ui_print "SQLite3 binary found in: $sqlpath"
 	elif [ -f /system/bin/sqlite3 ] ; 	then
 		sqlpath=/system/bin
 		echo "SQLite3 binary found in: $sqlpath" >> $logfile

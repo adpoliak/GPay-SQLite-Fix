@@ -149,6 +149,9 @@ on_install() {
 	if [ -f /data/data/com.termux/files/usr/lib/sqlite3 ] ; then
 		sqlpath=/data/data/com.termux/files/usr/lib
 		ui_print "SQLite3 binary found in: $sqlpath"
+	elif [ -f /data/data/com.keramidas.TitaniumBackup/files/sqlite3 ] ; 	then
+		sqlpath=/data/data/com.keramidas.TitaniumBackup/files
+		ui_print "SQLite3 binary found in: $sqlpath"
 	elif [ -f /system/bin/sqlite3 ] ; 	then
 		sqlpath=/system/bin
 		ui_print "SQLite3 binary found in: $sqlpath"
